@@ -109,7 +109,7 @@ async def on_message(message):
                         data[server_id]['faq'] = {} # empty server faq
                         await message.channel.send('Successfully cleared ✅')
                     else:
-                        message.add_reaction('❌') # adding ❌ when the user doesn't have the rights
+                        await message.add_reaction('❌') # adding ❌ when the user doesn't have the rights
                 else:
                     ''' can be problematic if an faq starts with show, delete, add or list or if is clear all :/
                     if faq_command.startswith('show'):
